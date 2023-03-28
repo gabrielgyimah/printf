@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdarg.h>
 /**
- * _printf - Mimics the behaviour of the standard printf
- * @format: the value being passed
- * Return: Succes
+ * _printf - Works just like the standard printf
+ * @format: parameter for the values being passed
+ * Return: Success
  */
 
 int _printf(const char *format, ...)
