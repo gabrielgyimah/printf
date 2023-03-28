@@ -1,12 +1,14 @@
+#include "main.h"
 #include <unistd.h>
 
 /**
- * _putchar - prints a single character
- * @c: parameter the character to be printed
- * Return: 1
+ * _putchar - print a char
+ * @ch: char
+ * Return: int
  */
 
-int _putchar(char c)
+
+int _putchar(int ch)
 {
-	return (write(1, &c, 1));
+	return (write(1, &ch, 1));
 }

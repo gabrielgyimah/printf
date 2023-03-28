@@ -1,50 +1,51 @@
 #include "main.h"
 #include <stdarg.h>
+#include <stdlib.h>
+
 /**
- * _printf - Works just like the standard printf
- * @format: parameter for the values being passed
- * Return: Success
+ * _printf - produces output according to a format
+ * @format: char pointer
+ * Return: int
  */
 
 int _printf(const char *format, ...)
 {
-	int i, num_count = 0;
-	va_list param;
+	int i = 0, cnt = 0;
+	int (*func)(va_list);
+	va_list args;
 
-	va_start(param, format);
+	va_start(args, format);
 
-	for (i = 0; format[i] != '\0'; i++)
+	if (format == NULL)
+		return (-1);
+	while (format[i])
 	{
-		if (format[i] == '%')
+		if (format[i] != '%')
 		{
-			switch (format[i + 1])
-			{
-				case 'c':
-					num_count += _putchar(va_arg(param, int)) - 1;
-					i += 1;
-					break;
-				case 'i':
-				case 'd':
-					num_count += digit(va_arg(param, int));
-					i += 1;
-					break;
-				case 's':
-					num_count += _puts(va_arg(param, char *)) - 1;
-					i += 1;
-					break;
-				case '%':
-					num_count += _puts("%") - 1;
-					i += 1;
-					break;
-				default:
-					num_count += _putchar(format[i]);
-					break;
-			}
+			cnt += _putchar(format[i]);
+			i++;
 			continue;
 		}
+		if (format[i + 1] == '%')
+		{
+			cnt += _putchar(format[++i]);
+			i++;
+			continue;
+		}
+		func = get_func(format[++i]);
+		if ((func) != NULL)
+		{
+			cnt += func(args);
+		}
 		else
-			num_count += _putchar(format[i]);
+		{
+			if (format[i] == '\0')
+				return (-1);
+			cnt += _putchar(format[i - 1]);
+			cnt += _putchar(format[i]);
+		}
+		i++;
 	}
-	va_end(param);
-	return (num_count);
+	va_end(args);
+	return (cnt);
 }
