@@ -34,7 +34,7 @@ int pr_ptr(va_list args)
 /**
  * cnvrt_to_mem_addr - convert decimal to hexidecimal
  * @n: unsigned long int
- * @ptr: parameter int pointer 
+ * @ptr: parameter int pointer
  * Return: int
  */
 
