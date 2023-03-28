@@ -20,20 +20,20 @@ int _printf(const char *format, ...)
 			switch (format[i + 1])
 			{
 				case 'c':
-					num_count += _putchar(va_arg(param, int));
+					num_count += _putchar(va_arg(param, int)) - 1;
 					i += 1;
 					break;
-				case 'd':
 				case 'i':
+				case 'd':
 					num_count += digit(va_arg(param, int));
 					i += 1;
 					break;
 				case 's':
-					num_count += _puts(va_arg(param, char *));
+					num_count += _puts(va_arg(param, char *)) - 1;
 					i += 1;
 					break;
 				case '%':
-					num_count += _puts("%");
+					num_count += _puts("%") - 1;
 					i += 1;
 					break;
 				default:
@@ -42,7 +42,8 @@ int _printf(const char *format, ...)
 			}
 			continue;
 		}
-		num_count += _putchar(format[i]);
+		else
+			num_count += _putchar(format[i]);
 	}
 	va_end(param);
 	return (num_count);

@@ -8,7 +8,7 @@
 int digit(int pin)
 {
 	int *store = malloc(sizeof(pin));
-	int c, count = 0, d = 0, b;
+	int c, count = 0, b;
 
 	if (pin < 0)
 	{
