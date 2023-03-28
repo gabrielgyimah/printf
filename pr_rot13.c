@@ -2,7 +2,7 @@
 
 /**
  * pr_rot13 - prints the encrypted rot13 version of a string
- * @args: va_list
+ * @args: va_list variable list
  * Return: int
  */
 

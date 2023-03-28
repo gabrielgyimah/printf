@@ -3,7 +3,7 @@
 
 /**
  * pr_dec - prints the decimal representation of a number
- * @args: va_list
+ * @args: variable va_list
  * Return: int
  */
 
@@ -21,8 +21,8 @@ int pr_dec(va_list args)
 
 /**
  * cnvrt_to_dec - converts to decimal
- * @n: int
- * @cnt: int pointer
+ * @n: parameter int
+ * @cnt: parameter int pointer
  * Return: int
  */
 

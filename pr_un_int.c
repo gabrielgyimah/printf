@@ -2,7 +2,7 @@
 
 /**
  * pr_un_int - prints the octa representation of a number
- * @args: va_list
+ * @args: parameter variable list va_list
  * Return: int
  */
 

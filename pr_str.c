@@ -2,8 +2,8 @@
 #include <string.h>
 
 /**
- * pr_str - prints a string
- * @args: va_list
+ * pr_str - prints a string to standard output stream
+ * @args: va_list variable lists
  * Return: int
  */
 

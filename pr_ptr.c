@@ -3,7 +3,7 @@
 
 /**
  * pr_ptr - prints the memory address of a variable
- * @args: va_list
+ * @args: va_list variable list
  * Return: int
  */
 
@@ -34,7 +34,7 @@ int pr_ptr(va_list args)
 /**
  * cnvrt_to_mem_addr - convert decimal to hexidecimal
  * @n: unsigned long int
- * @ptr: int pointer
+ * @ptr: parameter int pointer 
  * Return: int
  */
 

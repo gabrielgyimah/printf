@@ -3,7 +3,7 @@
 
 /**
  * pr_hex - prints the hexidecimal representation of a number
- * @args: va_list
+ * @args: va_list list variable
  * Return: int
  */
 
@@ -18,8 +18,8 @@ int pr_hex(va_list args)
 
 /**
  * cnvrt_to_hex - convert decimal to hexidecimal
- * @n: unsigned int
- * @ptr: int pointer
+ * @n: parameter unsigned int
+ * @ptr: parameter int pointer
  * Return: int
  */
 

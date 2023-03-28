@@ -1,9 +1,8 @@
 #include "main.h"
 
-
 /**
  * pr_octa - prints the octa representation of a number
- * @args: va_list
+ * @args: va_list variable list
  * Return: int
  */
 

@@ -1,9 +1,8 @@
 #include "main.h"
 
-
 /**
  * pr_rev - prints the reverse version of a string
- * @args: va_list
+ * @args: va_list varable list
  * Return: int
  */
 
@@ -29,7 +28,7 @@ int pr_rev(va_list args)
 
 /**
  * get_str_len - helper func for get length of a string
- * @s: char pointer
+ * @s: parameter char pointer
  * Return: int
  */
 

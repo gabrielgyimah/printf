@@ -1,9 +1,8 @@
 #include "main.h"
 
-
 /**
  * pr_non_prt - prints non-printable characters
- * @args: va_list
+ * @args: va_list variable list
  * Return: int
  */
 
